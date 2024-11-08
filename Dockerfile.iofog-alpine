@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8/nodejs-18-minimal:1-138
+FROM node:18-alpine
 
 ENV DEBUG=iofog
 ENV LOGLEVEL=info
@@ -10,7 +10,6 @@ ADD package.json /opt/app-root/
 RUN npm install
 COPY lib lib
 COPY bin bin
-COPY LICENSE /licenses/LICENSE
-
-LABEL org.opencontainers.image.description=proxy
+COPY LICENSE LICENSE
+LABEL org.opencontainers.image.description proxy
 CMD ["node", "/opt/app-root/bin/iofog.js"]

@@ -1,4 +1,4 @@
-const ioFogClient = require('@iofog/nodejs-sdk')
+const ioFogClient = require('@datasance/iofog-nodejs-sdk')
 const proxy = require('../lib/proxy').proxy
 const log = require('../lib/log.js').logger()
 

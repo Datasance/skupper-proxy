@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi9/nodejs-20-minimal:9.5-1730525319
+FROM registry.access.redhat.com/ubi9/nodejs-20-minimal:latest
 
 ENV DEBUG=iofog
 ENV LOGLEVEL=info
